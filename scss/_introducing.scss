@@ -1,0 +1,48 @@
+//
+//	INTRODUCING
+// ------------------------------------------------------
+
+.introducing {
+	display: grid;
+	grid-template-columns: 25% 1fr 1fr;
+}
+
+.image {
+	font-size: 0;
+	background-size: cover;
+}
+
+.article {
+	margin: 6.6% 10% 10% 10%;
+	background: $color-bg;
+}
+
+.article_title{
+	margin: 0;
+	font: {
+		size: 2em;
+		weight: 300;
+	}
+	position: relative;
+	padding-top: 5%;
+}
+
+.article_title:before {
+	width: 50px;
+	height: 5px;
+	content: "";
+	position: absolute;
+	background: $color-main;
+	z-index: 1;
+	top: 0;
+	right: auto;
+	left: 0;
+	margin-left: 0;
+}
+
+.article_content {
+	font-size: 1em ;
+	line-height: 1.7em;
+	margin-bottom: 15%;
+	margin-top: 5%;
+}

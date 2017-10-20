@@ -1,0 +1,84 @@
+//
+//	FIRST SECTION
+// ------------------------------------------------------
+
+.cover {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	height: 56.25em; /* 900/16 */
+	overflow: hidden;
+	background: $color-main url(../img/texture.jpg) fixed;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+//
+//	ANIMATION LOGO IN CIRCLE
+// ------------------------------------------------------
+
+.logo_in_circle {
+	margin: 0 auto;
+	width: 25em; /* 400/16 */
+  	height: 25em; /* 400/16 */
+  	position: absolute;
+  	left: 50%;
+  	top: 50%;
+	background: $color-2;
+	border-radius: 100% ;
+	z-index: 10;
+    transform: translate(-50%, -50%);
+    display: flex;
+	justify-content: center;
+    align-items: center;
+	img {
+		height: 40%;
+		width: auto;
+		&:nth-child(1) {
+			animation-duration: 6s;
+			animation-name: lastLeft;
+		}
+		&:nth-child(2) {
+			margin: 0 0.9375em 0 0.9375em; /* 15/16 */ /* 15/16 */
+			animation-duration: 4s;
+			animation-name: middleLeft;
+		}
+		&:nth-child(3) {
+			animation-duration: 2s;
+			animation-name: left;
+		}
+	}
+}
+
+//
+//	ANIMATION CIRCLE, PULSE
+// ------------------------------------------------------
+ 
+.circles {
+  	text-align: center;
+  	width: 450px;
+  	height: 450px;
+  	position: absolute;
+ 	top: 50%;
+  	left: 50%;
+    transform: translate(-50%, -50%);
+    &:before,
+	&:after {
+	  	content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $color-circle;
+		border-radius: 100%;
+		opacity: 0;
+	}
+	&:before {
+    	transform: scale(1);
+    	animation: pulse 4s infinite linear;
+	}
+	&:after {
+		animation: pulse 4s 2s infinite linear;
+	}
+}	

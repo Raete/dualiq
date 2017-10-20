@@ -1,0 +1,68 @@
+//
+//  ANIMATION LOGO IN CIRCLE
+// ------------------------------------------------------
+
+@-webkit-keyframes lastLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-400%, 0, 0);
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes middleLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-400%, 0, 0);
+  }
+  20% {
+    
+  }
+  100% {
+    opacity: 1;
+    visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes left {
+  0% {
+    opacity: 0;
+    transform: translate3d(-300%, 0, 0);
+  }
+  20% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+//
+//  ANIMATION CIRCLE, PULSE
+// ------------------------------------------------------
+
+ @-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0;
+  }
+  33% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    opacity: 0;
+  }
+}
