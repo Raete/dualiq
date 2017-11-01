@@ -3,82 +3,189 @@
 // ------------------------------------------------------
 
 .cover {
-	margin: 0 auto;
-	text-align: center;
-	width: 100%;
-	height: 56.25em; /* 900/16 */
-	overflow: hidden;
-	background: $color-main url(../img/texture.jpg) fixed;
-	padding-left: 5%;
-	padding-right: 5%;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 56.25em; /* 900/16 */
+  overflow: hidden;
+  background: $color-main url(../img/texture.jpg) fixed;
+  padding: 0 5% 0 5%;
 }
 
-//
-//	ANIMATION LOGO IN CIRCLE
+
+// main menu 
+// ------------------------------------------------------
+.menu_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 3.125em auto 0;
+  max-width: 75em; /* 1200/16 */
+  img {
+    height: 52px;
+  }
+}
+
+.burger_menu {
+  width: 52px;
+  height: 52px;
+  background: $color-bg;
+  color: $color-main;
+  text-align: center;
+  line-height: 52px;
+  z-index: 99;
+  font-size: 26px;
+  cursor: pointer;
+  position: relative;
+  span {
+    display: block;
+    height: 5px;
+    background-color: $color-main;
+    position: absolute;
+    left: 13px;
+    right: 13px;
+    margin: auto;
+    transition: .5s;
+    &:nth-child(1) {
+      top: 15px;
+      opacity: 1;
+    }
+    &:nth-child(2) {
+      top: 0;
+      bottom: 0;
+    }
+    &:nth-child(3) {
+      bottom: 14px;
+      opacity: 1;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.burger_menu_full {
+  display: none;
+  ul li {
+    list-style: none;
+    margin: 1.875em 0 0 0; /* 30/16 */
+  }
+  li:first-child {
+    margin: 0;
+  }
+  li {
+    .link {
+      font-size: 2em;
+      line-height: 1.5em;
+      color: $color-main;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover {
+        border-bottom: solid 0.125em $color-main; /* 2/16 */
+        padding: 0 0 0.625em; /* 10/16 */
+      }
+    }
+  }
+}
+
+// open full menu
+// ------------------------------------------------------
+.menu_wrapper.open {
+  .burger_menu {
+    span:nth-child(1) {
+      opacity: 1;
+      transform: rotate(405deg);
+      top: 46%;
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      opacity: 1;
+      transform: rotate(-405deg);
+      bottom: 45%
+    }
+  }
+  .burger_menu_full {
+    background: $color-3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 20;
+    overflow: hidden;
+  }
+}
+
+// logo in circle - animace
 // ------------------------------------------------------
 
 .logo_in_circle {
-	margin: 0 auto;
-	width: 25em; /* 400/16 */
-  	height: 25em; /* 400/16 */
-  	position: absolute;
-  	left: 50%;
-  	top: 50%;
-	background: $color-2;
-	border-radius: 100% ;
-	z-index: 10;
-    transform: translate(-50%, -50%);
-    display: flex;
-	justify-content: center;
-    align-items: center;
-	img {
-		height: 40%;
-		width: auto;
-		&:nth-child(1) {
-			animation-duration: 6s;
-			animation-name: lastLeft;
-		}
-		&:nth-child(2) {
-			margin: 0 0.9375em 0 0.9375em; /* 15/16 */ /* 15/16 */
-			animation-duration: 4s;
-			animation-name: middleLeft;
-		}
-		&:nth-child(3) {
-			animation-duration: 2s;
-			animation-name: left;
-		}
-	}
+  margin: 0 auto;
+  width: 25em; /* 400/16 */
+  height: 25em; /* 400/16 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: $color-2;
+  border-radius: 100%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 40%;
+    width: auto;
+    &:nth-child(1) {
+      animation-duration: 6s;
+      animation-name: lastLeft;
+    }
+    &:nth-child(2) {
+      margin: 0 0.9375em 0 0.9375em; /* 15/16 */ /* 15/16 */
+      animation-duration: 4s;
+      animation-name: middleLeft;
+    }
+    &:nth-child(3) {
+      animation-duration: 2s;
+      animation-name: left;
+    }
+  }
 }
 
-//
-//	ANIMATION CIRCLE, PULSE
+// circles - animation
 // ------------------------------------------------------
- 
+
 .circles {
-  	text-align: center;
-  	width: 450px;
-  	height: 450px;
-  	position: absolute;
- 	top: 50%;
-  	left: 50%;
-    transform: translate(-50%, -50%);
-    &:before,
-	&:after {
-	  	content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: $color-circle;
-		border-radius: 100%;
-		opacity: 0;
-	}
-	&:before {
-    	transform: scale(1);
-    	animation: pulse 4s infinite linear;
-	}
-	&:after {
-		animation: pulse 4s 2s infinite linear;
-	}
-}	
+  text-align: center;
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-circle;
+    border-radius: 100%;
+    opacity: 0;
+  }
+  &:before {
+    transform: scale(1);
+    animation: pulse 4s infinite linear;
+  }
+  &:after {
+    animation: pulse 4s 2s infinite linear;
+  }
+}
