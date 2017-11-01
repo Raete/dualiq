@@ -1,0 +1,161 @@
+//
+//	FOOTER
+// ------------------------------------------------------
+
+.prefooter {
+	background: $color-footer;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	h1 {
+		font-size: 1em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: $color-main;
+		margin-bottom: 1.875em; /* 30/16 */
+	}
+	time {
+		font-size: .7em;
+		text-transform: uppercase;
+		color: $color-main;
+		letter-spacing: 0.0625em; /* 1/16 */
+	}
+	img {
+		width: 50%
+	}
+	p {
+		color: $color-2;
+	}
+}
+
+.box {
+	border-right: 1px solid $color-2;
+	width: 25%;
+	padding: 3.125em 2.5em;  /* 50/16 */ /* 40/16 */
+	&:nth-child(1) {
+		background: $color-3;
+		order: 1;
+	}
+	&:nth-child(2) {
+		order: 2
+	}
+	&:nth-child(3) {
+		order: 3;
+		li {
+			list-style-type: none;
+			font-size: .9em;
+			line-height: 1.5em;
+			color: $color-2;
+			margin-top: 0.9375em; /* 15/16 */
+			text-transform: uppercase;
+		}
+		ul {
+			padding: 0;
+		}
+	}
+	&:nth-child(4) {
+		font-size: 1em;
+		line-height: 1.8em;
+		color: $color-2;
+		order: 4
+	}
+	&:last-child {
+		border-right: 0
+	}
+	.post {
+		border-bottom: 1px solid $color-2;
+		padding-bottom: 1.25em; /* 20/16 */
+	}
+}
+
+
+//	FORM
+
+
+form {
+	max-width: 100%;
+}
+
+input,
+textarea {
+	color: darken($color-bg, 20%);
+	font-size: inherit;
+	font-family: inherit;
+	padding: 0.875em 1.0625em; /* 14/16 */ /* 17/16 */
+	background: darken($color-bg, 10%);
+	border: none;
+	width: 100%; 
+	-webkit-appearance: none; 
+	margin-right: 5%;
+	margin-bottom: 1em;
+}
+
+textarea {
+	height: 9.375em; /* 150/16 */
+	margin-bottom: 1.875em; 
+}
+
+input:focus,
+textarea:focus {
+	-webkit-transition: 0.25s all ease-in-out;
+	transition: 0.25s all ease-in-out;
+	background: $color-bg;
+}
+
+.button {
+	background: $color-main;
+	color: $color-footer;
+	text-transform: uppercase;
+	font-size: 1.5625em; /* 25/16 */
+	font-weight: bold;
+	width: 100%;
+	padding: 1.375em 0; /* 22/16 */
+	cursor: pointer; 
+	margin: 0 auto;
+  	transition-duration: 0.5s;
+  	transition-property: color, background;
+  	&:hover,
+  	&:focus {
+		background: $color-footer;
+		color: $color-main;
+	}
+}
+
+::-webkit-input-placeholder, 
+::-moz-placeholder,
+:-ms-input-placeholder {
+	color: darken($color-bg, 10%);
+	font-style: italic;
+}
+
+
+footer {
+	background: $color-bg;
+	color: $color-3;
+	text-align: center;
+	padding: 2.5em 0; /* 40/16 */ /* 0/16 */
+	text-transform: uppercase;
+	letter-spacing: 0.0625em; /* 1/16 */
+	font-weight: 700;
+	font-size: .8em;
+}
+
+.back-to-top {
+	width: 80px;
+	height: 50px;
+	background: $color-main;
+	color: $color-3;
+	position: fixed;
+	bottom: 100px;
+	right: 0;
+	z-index: 5;
+	display: block;
+	opacity: .8;
+	text-align: center;
+	font-size: 40px;
+	&:hover {
+		opacity: 1;
+		transition: opacity .2s;
+	}
+}

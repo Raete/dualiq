@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,22 +6,22 @@
 <title>dualiq</title>
 <script src="https://use.fontawesome.com/2d17322054.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&amp;subset=latin-ext" rel="stylesheet">  
-<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/main-style.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
 </head>
 <body>
 	<section class="cover">
-		<header class="top_menu">
+		<header class="menu_wrapper">
 			<img src="img/logo/logo.svg" alt="dualiq">
-			<div class="menu">
-				<div class="icon_menu">
+			<div>
+				<div class="burger_menu">
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
-				<nav>
+				<nav class="burger_menu_full">
 					<ul>
 					    <li><a class="link" href="#introducing">Introducing</a></li>
 					    <li><a class="link" href="#services">what we do</a></li>
@@ -44,45 +45,46 @@
 	</section>
 	<section class="introducing" id="introducing">
 
-		<div class="title_section title_section--light">
-			<div class="title_wrapper title_wrapper--right">
-				<h1 class="title_header">Introducing</h1>
-				<h2 class="title_subHeader">About Studio</h2>
+		<div class="title title--right">
+			<div class="title_wrapper">
+				<div class="separator--center separator--dark"></div>
+				<h1 class="title_wrapper_h1">Introducing</h1>
+				<h2 class="title_wrapper_h2">About Studio</h2>
 			</div>
 		</div>
 
-		<article class="article">
-			<h1 class="article_title">Hello!</h1>
-			<p class="article_content">Cheesecake halvah gingerbread sesame snaps. Chocolate toffee dessert biscuit cake cheesecake. Sweet roll biscuit marzipan jelly-o danish. Pastry muffin ice cream brownie bonbon pie ice cream. Lemon drops pie icing donut jujubes soufflé bonbon. Fruitcake cake sugar plum chupa chups carrot cake. </p>
-		</article>
+		<div class="introducing_content">
+			<article class="introducing_article">
+				<div class="introducing_article_wr">
+					<h3 class="article_h3">Hello!</h3>
+					<p class="article_p">Cheesecake halvah gingerbread sesame snaps. Chocolate toffee dessert biscuit cake cheesecake. Sweet roll biscuit marzipan jelly-o danish. Pastry muffin ice cream brownie bonbon pie ice cream. Lemon drops pie icing donut jujubes soufflé bonbon. Fruitcake cake sugar plum chupa chups carrot cake.</p>
+				</div>
+			</article>
+			<div class="image-1"></div>
 
-		<div class="image_1 image">
-			<img src="img/arhitecture.jpg" alt="">
+			<div class="image-2"></div>
+			<article class="introducing_article">
+				<div class="introducing_article_wr">
+					<h3 class="article_h3">Jelly beans pastry </h3>
+					<p class="article_p">Cheesecake halvah gingerbread sesame snaps. Chocolate toffee dessert biscuit cake cheesecake. Sweet roll biscuit marzipan jelly-o danish. Pastry muffin ice cream brownie bonbon pie ice cream. Lemon drops pie icing donut jujubes soufflé bonbon. Fruitcake cake sugar plum chupa chups carrot cake.</p>
+				</div>
+			</article>		
 		</div>
-
-		<div class="image_2 image">
-			<img src="img/woman.jpg" alt="">
-		</div>
-
-		<article class="article">
-			<h1 class="article_title">Jelly beans pastry </h1>
-			<p class="article_content">Cheesecake halvah gingerbread sesame snaps. Chocolate toffee dessert biscuit cake cheesecake. Sweet roll biscuit marzipan jelly-o danish. Pastry muffin ice cream brownie bonbon pie ice cream. Lemon drops pie icing donut jujubes soufflé bonbon. Fruitcake cake sugar plum chupa chups carrot cake.</p>
-		</article>		
-
 	</section>
 
 	<section class="services" id="services">
 
-		<div class="title_section title_section--dark">
-			<div class="title_wrapper title_wrapper--right">
-				<h1 class="title_header">What we do</h1>
-				<h2 class="title_subHeader">Our services</h2>
+		<div class="title title--main-color title--right">
+			<div class="title_wrapper">
+				<div class="separator--center separator--main-color"></div>
+				<h1 class="title_wrapper_h1">what we do</h1>
+				<h2 class="title_wrapper_h2">Our services</h2>
 			</div>
 		</div>
 
-		<div class="content">
-			<div class="wrap-service-menu">
-				<ul class="service-menu">
+		<div class="services_content">
+			<div class="services_menu_wr">
+				<ul class="service_menu">
 					<li data-from="top" ><a href="#branding"><i class="fa fa-eye fa-4x"></i>branding</a></li>
 					<li data-from="top" class="selected"><a href="#web"><i class="fa fa-television fa-4x"></i>web design</a></li>
 					<li data-from="top"><a href="#development"><i class="fa fa-code fa-4x"></i>development</a></li>
@@ -90,11 +92,10 @@
 				</ul>
 			</div>
 			
-			<div class="service-info contentSet" id="branding" >
-				<div class="service-info-text ">
-					<p>Cheesecake halvah gingerbread sesame snaps. Chocolate toffee dessert biscuit cake cheesecake. Sweet roll biscuit marzipan jelly-o danish. Pastry muffin ice cream brownie bonbon pie ice cream. Lemon drops pie icing donut jujubes soufflé bonbon. Fruitcake cake sugar plum chupa chups carrot cake.</p>
-				</div>
-				<div class="service-info-list ">
+			<div class="service_info contentSet" id="branding" >
+				<p class="service_info_p">Cheesecake halvah gingerbread sesame snaps. Chocolate toffee dessert biscuit cake cheesecake. Sweet roll biscuit marzipan jelly-o danish. Pastry muffin ice cream brownie bonbon pie ice cream. Lemon drops pie icing donut jujubes soufflé bonbon. Fruitcake cake sugar plum chupa chups carrot cake.</p>
+
+				<div class="service_info_list">
 					<ul>
 						<li><i class="fa fa-check-square"></i>Jelly biscuit croissant cupcake dragée</li>
 						<li><i class="fa fa-check-square"></i>Lemon drops jujubes macaroon</li>
@@ -105,11 +106,9 @@
 				</div>
 			</div>
 
-			<div class="service-info contentSet" id="web" >
-				<div class="service-info-text ">
-					<p>Powder ice cream tootsie roll toffee marshmallow cupcake oat cake macaroon. Fruitcake jelly beans gingerbread bear claw cake soufflé cupcake lemon drops marzipan. Lollipop powder liquorice marzipan powder bonbon ice cream pie. Chupa chups oat cake pie cupcake sweet roll marzipan chocolate bar.</p>
-				</div>
-				<div class="service-info-list ">
+			<div class="service_info contentSet" id="web" >
+				<p class="service_info_p">Powder ice cream tootsie roll toffee marshmallow cupcake oat cake macaroon. Fruitcake jelly beans gingerbread bear claw cake soufflé cupcake lemon drops marzipan. Lollipop powder liquorice marzipan powder bonbon ice cream pie. Chupa chups oat cake pie cupcake sweet roll marzipan chocolate bar.</p>
+				<div class="service_info_list ">
 					<ul>
 						<li><i class="fa fa-check-square"></i>Jelly biscuit croissant cupcake dragée</li>
 						<li><i class="fa fa-check-square"></i>Lemon drops jujubes macaroon</li>
@@ -119,11 +118,9 @@
 				</div>
 			</div>
 
-			<div class="service-info contentSet" id="development" >
-				<div class="service-info-text ">
-					<p>Cupcake pudding gummies. Jelly sweet lemon drops topping biscuit macaroon pastry sweet. Tootsie roll cheesecake sweet jelly icing tart chocolate cake bear claw. Sugar plum gummies cookie cake candy halvah croissant. Ice cream sesame snaps pastry candy canes sugar plum chocolate cake macaroon dessert. </p>
-				</div>
-				<div class="service-info-list ">
+			<div class="service_info contentSet" id="development" >
+				<p class="service_info_p">Cupcake pudding gummies. Jelly sweet lemon drops topping biscuit macaroon pastry sweet. Tootsie roll cheesecake sweet jelly icing tart chocolate cake bear claw. Sugar plum gummies cookie cake candy halvah croissant. Ice cream sesame snaps pastry candy canes sugar plum chocolate cake macaroon dessert. </p>
+				<div class="service_info_list">
 					<ul>
 						<li><i class="fa fa-check-square"></i>Jelly biscuit croissant cupcake dragée</li>
 						<li><i class="fa fa-check-square"></i>Lemon drops jujubes macaroon</li>				
@@ -133,11 +130,9 @@
 				</div>
 			</div>
 
-			<div class="service-info contentSet"  id="photography">
-				<div class="service-info-text ">
-					<p>Bonbon cotton candy ice cream. Lemon drops lollipop jelly beans ice cream cupcake candy chocolate bar candy. Sweet roll bear claw topping chupa chups. Liquorice jujubes icing macaroon ice cream jujubes topping.</p>
-				</div>
-				<div class="service-info-list ">
+			<div class="service_info contentSet"  id="photography">
+				<p class="service_info_p">Bonbon cotton candy ice cream. Lemon drops lollipop jelly beans ice cream cupcake candy chocolate bar candy. Sweet roll bear claw topping chupa chups. Liquorice jujubes icing macaroon ice cream jujubes topping.</p>
+				<div class="service_info_list ">
 					<ul>					
 						<li><i class="fa fa-check-square"></i>Chocolate bar oat cake dessert pastry pudding</li>
 						<li><i class="fa fa-check-square"></i>Oat cake chocolate cake icing soufflé ice cream</li>
@@ -150,73 +145,73 @@
 	</section>
 
 	<section class="project" id="project">
-		<div class="separator"></div>
-		<div class="title-center">
-			<h1>work we did</h1>
-			<h2>Latest Project</h2>
+		<div class="separator--center separator--white"></div>
+		<div class="title--center title--white">
+			<h1 class="title--center-h1">work we did</h1>
+			<h2 class="title--center-h2">Latest Project</h2>
 		</div>
 
-		<div class="project-gallery">
+		<div class="project_gallery">
 
-			<div class="hover-effect">
+			<div class="gallery_hover">
 				<img src="img/small/app01.jpg" alt="project1">
-				<div class="description">
+				<div class="project_description">
 					<h2>Jelly <span>biscuit</span></h2>
 					<a href="img/small/app01.jpg"></a>
 				</div>			
 			</div>
 
-			<div class="hover-effect">
+			<div class="gallery_hover">
 				<img src="img/small/app02.jpg" alt="project2">
-				<div class="description">
+				<div class="project_description">
 					<h2>Croissant <span>cupcake</span></h2>	
 					<a href="img/small/app02.jpg"></a>
 				</div>			
 			</div>
 
-			<div class="hover-effect">
+			<div class="gallery_hover">
 					<img src="img/small/brand01.jpg" alt="project3">
-				<div class="description">
+				<div class="project_description">
 					<h2>Halvah <span>macaroon</span></h2>
 					<a href="img/small/brand01.jpg"></a>
 				</div>		
 			</div>
 
-			<div class="hover-effect">
+			<div class="gallery_hover">
 					<img src="img/small/brand02.jpg" alt="project4">
-				<div class="description">
+				<div class="project_description">
 					<h2>Gingerbread <span>sweet</span></h2>
 					<a href="img/small/brand02.jpg"></a>
 				</div>			
 			</div>
 
-			<div class="hover-effect">
+			<div class="gallery_hover">
 					<img src="img/small/photo01.jpg" alt="project5">
-				<div class="description">
+				<div class="project_description">
 					<h2>Candy <span>chocolate</span></h2>
 					<a href="img/small/photo01.jpg"></a>
 				</div>			
 			</div>
 
-			<div class="hover-effect">
+			<div class="gallery_hover">
 					<img src="img/small/photo02.jpg" alt="project6">
-				<div class="description">
+				<div class="project_description">
 					<h2>Lemon <span>sugar plum</span></h2>
 					<a href="img/small/photo02.jpg"></a>
 				</div>			
 			</div>
 
-			<div class="hover-effect">
+			<div class="gallery_hover">
 					<img src="img/small/photo03.jpg" alt="project7">
-				<div class="description">
+				<div class="project_description">
 					<h2>Tootsie <span>carrot cake</span></h2>
 					<a href="img/small/photo03.jpg"></a>
 				</div>			
 			</div>
 
-			<div class="hover-effect">
+			<div class="gallery_hover">
 					<img src="img/small/web01.jpg" alt="project8">
-				<div class="description">
+				<div class="project_description">
 					<h2>Ice cream <span>beans gummies</span></h2>
 					<a href="img/small/web01.jpg"></a>
 				</div>			
@@ -226,52 +221,52 @@
 	</section>
 
 	<section class="team" id="team">
-		<div class="title-center">
-			<div class="separator"></div>
-			<h1>Team</h1>
-			<h2>Meet Our People</h2>
+		<div class="separator--center separator--dark"></div>
+		<div class="title--center title--dark">
+			<h1 class="title--center-h1">team</h1>
+			<h2 class="title--center-h2">Meet Our People</h2>
 		</div>
 	
 		<div class="people">
 
-			<div class="hover-effect-02">
+			<div class="people_hover">
 				<img src="img/team/team1.jpg" alt="Mike"/>
-				<div class="popis">
+				<div class="people_name">
 					<h2>Mike</h2>
 				</div>				
 			</div>
 
-			<div class="hover-effect-02">
+			<div class="people_hover">
 				<img  src="img/team/team2.jpg" alt="Zoe">
-				<div class="popis">
+				<div class="people_name">
 					<h2>Zoe</h2>	
 				</div>				
 			</div>
 
-			<div class="hover-effect-02">
+			<div class="people_hover">
 				<img  src="img/team/team3.jpg" alt="Lena">
-				<div class="popis">
+				<div class="people_name">
 					<h2>Lena</h2>
 				</div>				
 			</div>
 
-			<div class="hover-effect-02">
+			<div class="people_hover">
 				<img  src="img/team/team4.jpg" alt="Alex">
-				<div class="popis">
+				<div class="people_name">
 					<h2>Alex</h2>
 				</div>				
 			</div>
 
-			<div class="hover-effect-02">
+			<div class="people_hover">
 				<img  src="img/team/team5.jpg" alt="Mark">
-				<div class="popis">
+				<div class="people_name">
 					<h2>Mark</h2>
 				</div>			
 			</div>
 
-			<div class="hover-effect-02">
+			<div class="people_hover">
 				<img  src="img/team/team6.jpg" alt="Tootsie">
-				<div class="popis">
+				<div class="people_name">
 					<h2>Tootsie</h2>
 				</div>			
 			</div>
@@ -280,63 +275,63 @@
 	</section>
 
 	<section class="process" id="process">
-		<div class="title-center">
-			<div class="separator"></div>
-			<h1>how we work </h1>
-			<h2>Work Process</h2>
+		<div class="separator--center separator--dark"></div>
+		<div class="title--center title--dark">
+			<h1 class="title--center-h1">how we work</h1>
+			<h2 class="title--center-h2">Work Process</h2>
 		</div>
 
-		<div  class="tl-container">
-			<div class="timeline-block clearfix">
-				<div class="timeline-ico">
+		<div  class="tl_container">
+			<div class="timeline_block">
+				<div class="timeline_ico">
 					<i class="fa fa-pencil"></i>
 				</div> 
 
-				<div class="timeline-content">
+				<div class="timeline_content">
 					<h1 class="num">01</h1>
-					<div class="timeline-content-info">
+					<div class="timeline_content_info">
 						<h2>design</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic.</p>
 					</div>
 				</div> 
 			</div> 
 
-			<div class="timeline-block clearfix">
-				<div class="timeline-ico">
+			<div class="timeline_block">
+				<div class="timeline_ico">
 					<i class="fa fa-television"></i>
 				</div> 
 
-				<div class="timeline-content">
+				<div class="timeline_content">
 					<h1 class="num">02</h1>
-					<div class="timeline-content-info">
+					<div class="timeline_content_info">
 						<h2>development</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic.</p>
 					</div>
 				</div> 
 			</div> 
 		
-			<div class="timeline-block clearfix">
-				<div class="timeline-ico">
+			<div class="timeline_block">
+				<div class="timeline_ico">
 					<i class="fa fa-rocket"></i>
 				</div> 
 
-				<div class="timeline-content">
+				<div class="timeline_content">
 					<h1 class="num">03</h1>
-					<div class="timeline-content-info">
+					<div class="timeline_content_info">
 						<h2>launch</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic.</p>
 					</div>
 				</div> 
 			</div> 
 
-			<div class="timeline-block clearfix">
-				<div class="timeline-ico">
+			<div class="timeline_block">
+				<div class="timeline_ico">
 					<i class="fa fa-comments-o"></i>
 				</div> 
 
-				<div class="timeline-content">
+				<div class="timeline_content">
 					<h1 class="num">04</h1>
-					<div class="timeline-content-info">
+					<div class="timeline_content_info">
 						<h2>trainning & support</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic.</p>
 					</div>
@@ -349,32 +344,32 @@
 
 		<div class="slider">
 
-		    <div id="slider-item-1" class="slide">
+		    <div id="slider_item_1" class="slide">
 		    	<p>Oat cake jelly pastry bonbon cupcake jelly beans cheesecake. Bear claw cookie cotton candy jelly beans halvah lemon drops liquorice brownie. Donut carrot cake chupa chups dragée gummi bears halvah muffin gingerbread. Candy canes croissant chupa chups apple pie powder tiramisu marshmallow marzipan. </p>
 		    	<span><strong>Thomas</strong></span>
 		    </div>
 
-		    <div id="slider-item-2" class="slide">
+		    <div id="slider_item_2" class="slide">
 		    	<p>Oat cake jelly pastry bonbon cupcake jelly beans cheesecake. Bear claw cookie cotton candy jelly beans halvah lemon drops liquorice brownie. Donut carrot cake chupa chups dragée gummi bears halvah muffin gingerbread. Candy canes croissant chupa chups apple pie powder tiramisu marshmallow marzipan. </p>
 		    	<span><strong>Mark</strong></span>
 		    </div>
 
-		    <div id="slider-item-3" class="slide">
+		    <div id="slider_item_3" class="slide">
 		    	<p>Oat cake jelly pastry bonbon cupcake jelly beans cheesecake. Bear claw cookie cotton candy jelly beans halvah lemon drops liquorice brownie. Donut carrot cake chupa chups dragée gummi bears halvah muffin gingerbread. Candy canes croissant chupa chups apple pie powder tiramisu marshmallow marzipan. </p>
 		    	<span><strong>Allison</strong></span>
 		    </div>
 
-		    <div id="slider-item-4" class="slide">
+		    <div id="slider_item_4" class="slide">
 		    	<p>Oat cake jelly pastry bonbon cupcake jelly beans cheesecake. Bear claw cookie cotton candy jelly beans halvah lemon drops liquorice brownie. Donut carrot cake chupa chups dragée gummi bears halvah muffin gingerbread. Candy canes croissant chupa chups apple pie powder tiramisu marshmallow marzipan. </p>
 		    	<span><strong>Peter</strong></span>
 		    </div>        
 	  	</div>
 	<div >
-		<ul class="slider-nav">
-			<li data-from="right" ><a href="#slider-item-1"></a></li>
-			<li data-from="right" class="selected"><a href="#slider-item-2"></a></li>
-			<li data-from="right"><a href="#slider-item-3"></a></li>
-			<li data-from="right"><a href="#slider-item-4"></a></li>
+		<ul class="slider_nav">
+			<li data-from="right" ><a href="#slider_item_1"></a></li>
+			<li data-from="right" class="selected"><a href="#slider_item_2"></a></li>
+			<li data-from="right"><a href="#slider_item_3"></a></li>
+			<li data-from="right"><a href="#slider_item_4"></a></li>
 		</ul>
 
 	</div>
@@ -402,19 +397,19 @@
 		<div class="box">
 			<h1>Recent post</h1>
 			<div class="post">
-				<p class="post-meta">
+				<p >
 					Nullam ac urna eu felis dapibus sit amet
 				</p>
 				<time datetime="2014-10-20 19:00">Október 20, 2014</time>
 			</div>
 			<div class="post">
-				<p class="post-meta">
+				<p>
 					Nullam ac urna eu felis dapibus sit amet
 				</p>
 				<time datetime="2014-10-20 19:00">Október 20, 2014</time>
 			</div>
 			<div class="post">
-				<p class="post-meta">
+				<p>
 					Nullam ac urna eu felis dapibus sit amet
 				</p>
 				<time datetime="2014-10-20 19:00">Október 20, 2014</time>

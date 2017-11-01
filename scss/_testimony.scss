@@ -1,0 +1,55 @@
+//
+//	TESTIMONY
+// ------------------------------------------------------
+
+.testimony {
+	width: 100%;
+	height: auto;
+	background: $color-3;
+	position: relative;
+	padding: 6.25em; /* 100/16 */
+}
+
+.slider {
+	margin: 0 auto;
+	width: 75%;
+	text-align: center;
+	padding: 1.25em; /* 20/16 */
+	p {
+		font-size: 1.5em;
+		line-height: 1.5em;
+		color: $color-bg;
+	}
+	span {
+		font-size: .8em;
+		color: $color-main;
+		text-transform: uppercase;
+		letter-spacing: 0.0625em; /* 1/16 */
+		font-weight: 700;
+	}
+}
+
+.slider_nav {
+	margin: 3.125em auto 0; /*50/16*/
+	text-align: center;
+	padding: 0;
+	li {
+		margin-right: 0.625em; /* 10/16 */
+		position: relative;
+		width: 0.9375em; /* 15/16 */
+		height: 0.9375em; /* 15/16 */
+		background: $color-bg;
+		cursor: pointer;
+		border-radius: 100%;
+		display: inline-block;
+		&:hover {
+			background: $color-main;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&.selected {
+			background: $color-main;
+		}
+	}
+}

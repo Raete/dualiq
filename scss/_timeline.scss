@@ -1,0 +1,120 @@
+//
+//	TIMELINE
+// ------------------------------------------------------
+
+.hidden {
+	color: darken($color-bg, 10%);
+}
+
+.visible {
+	color: $color-main;
+}
+
+.process {
+	margin: 0 auto;
+	background: $color-bg;
+	text-align: center;
+	padding-top: 3.125em; /* 50/16 */
+}
+
+.tl_container { 
+	width: 90%;
+	max-width: 1170px;
+	margin: 3em auto;
+	position: relative;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  // -------------------------------------- middle line
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: darken($color-bg, 10%);
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+
+.timeline_block {
+  display: flex;
+  position: relative;
+  margin: 4em 0;
+  &:nth-child(even) {
+    justify-content: flex-end;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:nth-child(even) .timeline_content_info {
+    order: 2;
+    text-align: left;
+    border-left: 0.125em darken($color-bg, 10%) solid; /* 2/16 */
+    margin-left: 1.875em; /* 30/16 */
+    padding: 0 0 0 1.875em; /* 30/16 */
+    border-right: 0;
+  }
+  &:nth-child(even).timeline_content h1 {
+    order: 1;
+  }
+}
+
+.timeline_ico {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  border: darken($color-bg, 10%) 2px solid; 
+  background: $color-bg;
+  margin: 5.625em 0 0 -2.1875em; /* 90/16 */ /* 35/16 */
+  width: 4.375em; /* 70/16 */
+  height: 4.375em; /* 70/16 */
+  left: 50%;
+  order: 1;
+  i {
+    display: block;
+    position: relative;
+    text-align: center;
+    color: $color-main;
+    line-height: 2em;
+    font-size: 2em;
+  }
+}
+
+.timeline_content {
+  	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  	position: relative;
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+    order: 2;
+  h1 {
+    order: 2;
+    font-size: 5em;
+  }
+}
+
+.timeline_content_info {
+  	margin-right: 1.875em; /* 30/16 */
+  	padding-right: 1.875em; /* 30/16 */
+   	order: 1;
+  	color: $color-3;
+  	border-right: 0.125em darken($color-bg, 10%) solid; /* 2/16 */
+  	text-align: right;
+  h2 {
+    color: $color-3;
+    text-transform: uppercase;
+  }
+  p {
+    margin: 1em 0;
+    line-height: 1.6em;
+  }
+}
+

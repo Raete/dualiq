@@ -3,46 +3,63 @@
 // ------------------------------------------------------
 
 .introducing {
-	display: grid;
-	grid-template-columns: 25% 1fr 1fr;
+	width: 100%;
+	background: darken($color-bg, 8%);
+	display: flex;
+	&_content {
+		width: 75%;
+		display: flex;
+		flex-wrap: wrap;	
+	}
+	&_article {
+		width: 50%;
+		background: $color-bg;
+		&_wr{
+			margin: 6.6% 10% 10% 10%;
+		}
+	}
+}
+
+.article {
+	&_h3 {
+		margin: 0;
+		font-size: 2em ;
+		font-weight: 300;
+		position: relative;
+		padding-top: 5%;
+		&:before {
+			width: 50px;
+			height: 5px;
+			content: "";
+			position: absolute;
+			background: $color-main;
+			z-index: 1;
+			top: 0;
+			margin-left: 0;
+			right: auto;
+			left: 0;
+		}
+	}
+	&_p {
+		margin-top: 5%;
+		font-size: 1em ;
+		line-height: 1.7em;
+		margin-bottom: 15%;
+	}
 }
 
 .image {
+	width: 50%;
 	font-size: 0;
 	background-size: cover;
 }
 
-.article {
-	margin: 6.6% 10% 10% 10%;
-	background: $color-bg;
+.image-1 {
+	@extend .image; 
+	background: url(../img/arhitecture.jpg) no-repeat center center;
 }
 
-.article_title{
-	margin: 0;
-	font: {
-		size: 2em;
-		weight: 300;
-	}
-	position: relative;
-	padding-top: 5%;
-}
-
-.article_title:before {
-	width: 50px;
-	height: 5px;
-	content: "";
-	position: absolute;
-	background: $color-main;
-	z-index: 1;
-	top: 0;
-	right: auto;
-	left: 0;
-	margin-left: 0;
-}
-
-.article_content {
-	font-size: 1em ;
-	line-height: 1.7em;
-	margin-bottom: 15%;
-	margin-top: 5%;
+.image-2 {
+	@extend .image; 
+	background: url(../img/woman.jpg) no-repeat center center;
 }

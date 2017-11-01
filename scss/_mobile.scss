@@ -1,0 +1,289 @@
+//
+//	MOBILE
+// ------------------------------------------------------
+
+@media screen and (max-width: 1120px) {
+
+	.cover {
+		height: 500px;
+		background-attachment: fixed;
+	}
+
+	.logo_in_circle {
+		width: 15em;
+	  	height: 15em;
+	  	top: 32%;
+	  	img:nth-child(2) {
+			margin: 0 10px 0 10px; /* 15/16 */ /* 15/16 */
+		}
+	}
+
+	.circles{
+		width: 250px;
+  		height: 250px;
+  		top: 32%
+	}
+
+	.testimony {
+		padding: 6.25em 1em; /* 100/16 */
+	}
+
+	.slider {
+		width: 85%;
+	}
+
+	.box  {
+		width: 50%;
+		&:nth-child(1) {
+			order: 1;
+		}
+		&:nth-child(2) {
+			order: 3;
+		}
+		&:nth-child(3) {
+			border-right: 0;
+			order: 4;
+		}
+		&:nth-child(4) {
+			background: $color-3;
+			order: 2;	
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+
+	.introducing {
+		display: block;
+		&_content {
+			width: 100%;
+		}
+	}
+
+	.title {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		&_wrapper {
+			margin: 0;
+			padding: 50px 0;
+			&_h1 {
+				padding-top: 35px;
+			}
+			&_h1:before {
+				content: "";
+				display: none;
+			}
+		}
+	}
+
+	.introducing .separator--center {
+		display: block;
+	}
+
+	//	services
+	.services {
+		display: block;
+		&_content {
+			width: 100%;
+		}
+		&_menu > li {
+			padding: 40px 0; 
+		}
+	}
+
+	.gallery_hover h2 {	
+		font-size: 1em;
+	}
+
+	//	timeline
+	.tl_container::before {
+	//	middle line
+		margin-left: 0;
+	  	left: 18px;
+	}
+
+	.timeline_ico {
+	    left: 18px;
+	}
+
+	.timeline_content {
+		margin-left: 10%;
+		width: 100%;
+		h1 {
+	  		order: 1;
+		}
+	}
+
+	.timeline_content_info {
+		text-align: left;
+		border-right: 0;
+	  	margin-right: 1.875em; /* 30/16 */
+	  	padding-right: 1.875em; /* 30/16 */
+	  	border-left: 0.125em darken($color-bg, 20%) solid; /* 2/16 */
+	  	margin-left: 1.875em; /* 30/16 */
+	  	padding-left: 1.875em; /* 30/16 */
+	   	order: 1;
+	}
+
+	.timeline_block {
+		margin: 0;
+	}
+
+	.testimony {
+		font-size: 0.8em
+	}
+
+	.reference img {
+		width: 33.33333%; 
+	}
+}
+
+@media screen and (max-width: 680px) {
+
+	.logo_in_circle {
+		width: 12em;
+		height: 12em;
+		img:nth-child(2) {
+			margin: 0 8px 0 8px;
+		}
+	}	
+
+	.circles {
+		width: 200px;
+		height: 200px;
+		top: 32%;
+	}
+
+	.introducing_article {
+		width: 100%;
+	}
+
+	.image {
+		width: 100%;
+		height: 300px;
+		&-1 {
+			order: 1;
+		}
+	}
+
+	.service_info {
+		flex-direction: column;
+		&_p {
+			width: 100%;
+		}
+		&_list{
+			width: 100%;
+			ul {	
+				padding-left: 0;
+			}
+		}
+	}
+
+	.project_gallery .gallery_hover {
+		width: 50%;
+	}
+
+	.people {
+		flex-wrap: wrap;
+		&_hover {
+			width: 50%;
+		}
+	}
+
+	.timeline_content {
+		flex-direction: column;
+		margin-left: 0;
+	}
+
+	.timeline_block:nth-child(even) .timeline_content_info,
+	.timeline_content_info {
+		border-top: 0.125em darken($color-bg, 20%) solid; /* 2/16 */
+		border-left: 0;
+		border-right: 0;
+		text-align: center;
+		padding: 0;
+	}
+
+	.timeline_content h1 {
+		margin-bottom: 0.3em;
+	}
+
+	.timeline_content h1:first-child{
+		margin-top: 0;
+	}
+	.tl_container::before {
+		/* to je ta čára uprostřed */
+		display: none;
+	}
+
+	.timeline_ico {
+		display: none;
+	}
+
+	aside .box {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+
+	.service_menu > li {
+		width: 50%;
+		border-left: 1px solid darken($color-bg, 20%);
+		border-bottom: 1px solid darken($color-bg, 20%);
+	}
+	.top_menu {
+		text-align: center;
+		margin: 0 auto;
+	}
+	.cover header img{
+		float: none;
+	}
+
+	.menu {
+		float: none;
+		margin-top: 30px;
+		justify-content: center;
+	}
+
+	.logo_in_circle {
+		width: 10em;
+		height: 10em;
+		margin: 0 auto;
+		top: 30%;
+		img:nth-child(2) {
+			margin: 0 5px 0 5px;
+		}
+	}
+
+	.circles {
+	 display: none;
+	}
+
+	.reference img {
+		width: 50%;
+		height: 100%
+	}
+
+	.service_menu {
+		flex-wrap: wrap;
+		& > li {
+			width: 50%;
+			padding: 30px 0;
+		}
+		& > li > a > i {
+			display: none;
+		}
+	}
+
+	.project_gallery .gallery_hover,
+	.people .people_hover,
+	.reference img {
+		width: 100%;
+	}
+
+	nav ul {
+		padding-left: 0;
+	}
+}

@@ -4,16 +4,16 @@ String.prototype.capitalize = function() {
 
 (function($) {
 // hlavní menu vyvolání classu open (full menu)
-var $toggles = $('.icon-menu');
+var $toggles = $('.burger_menu');
 
 $toggles.on('click', function () {
-    $(this).closest('.top-menu').toggleClass('open');
+    $(this).closest('.menu_wrapper').toggleClass('open');
 });
 
 var $toggleLink = $('.link');
 
 $toggleLink.on('click', function () {
-    $(this).closest('.top-menu').toggleClass('open');
+    $(this).closest('.menu_wrapper').toggleClass('open');
 });
 
 
@@ -33,7 +33,7 @@ $toggleLink.on('click', function () {
 
 
 // galerie projektů
-var gallery = $('.project-gallery');
+var gallery = $('.project_gallery');
 var overlay = $('<div>', { id: 'overlay' });
     overlay.appendTo('body').hide();
 
@@ -63,7 +63,7 @@ var overlay = $('<div>', { id: 'overlay' });
 
   servicesContent.hide();
 
-  var selected = $('.service-menu').find('.selected');
+  var selected = $('.service_menu').find('.selected');
   
   function showServicesContent( selected ) {
     if ( selected.length ) {
@@ -78,7 +78,7 @@ var overlay = $('<div>', { id: 'overlay' });
 
   showServicesContent( selected );
 
-  $('.service-menu li').on('click', function(event) {
+  $('.service_menu li').on('click', function(event) {
     var fadeClass = 'fadeIn' + $(this).data('from').capitalize();
 
     $(this)
@@ -92,62 +92,62 @@ var overlay = $('<div>', { id: 'overlay' });
 
 
 //timeline změna barev
-	$.fn.viewportChecker = function(useroptions){
-		// Define options and extend with user
-		var options = {
-			classToAdd: 'visible',
-			offset: 100,
-			callbackFunction: function(elem){}
-		};
-		$.extend(options, useroptions);
+  $.fn.viewportChecker = function(useroptions){
+    // Define options and extend with user
+    var options = {
+      classToAdd: 'visible',
+      offset: 100,
+      callbackFunction: function(elem){}
+    };
+    $.extend(options, useroptions);
 
-		// Cache the given element and height of the browser
-		var $elem = this,
-		    windowHeight = $(window).height();
+    // Cache the given element and height of the browser
+    var $elem = this,
+        windowHeight = $(window).height();
 
-		this.checkElements = function(){
-			// Set some vars to check with
-			var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html'),
-			    viewportTop = $(scrollElem).scrollTop(),
-			    viewportBottom = (viewportTop + windowHeight);
+    this.checkElements = function(){
+      // Set some vars to check with
+      var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html'),
+          viewportTop = $(scrollElem).scrollTop(),
+          viewportBottom = (viewportTop + windowHeight);
 
-			$elem.each(function(){
-				var $obj = $(this);
-				// If class already exists; quit
-				if ($obj.hasClass(options.classToAdd)){
-					return;
-				}
+      $elem.each(function(){
+        var $obj = $(this);
+        // If class already exists; quit
+        if ($obj.hasClass(options.classToAdd)){
+          return;
+        }
 
-				// define the top position of the element and include the offset which makes is appear earlier or later
-				var elemTop = Math.round( $obj.offset().top ) + options.offset,
-				    elemBottom = elemTop + ($obj.height());
+        // define the top position of the element and include the offset which makes is appear earlier or later
+        var elemTop = Math.round( $obj.offset().top ) + options.offset,
+            elemBottom = elemTop + ($obj.height());
 
-				// Add class if in viewport
-				if ((elemTop < viewportBottom) && (elemBottom > viewportTop)){
-					$obj.addClass(options.classToAdd);
+        // Add class if in viewport
+        if ((elemTop < viewportBottom) && (elemBottom > viewportTop)){
+          $obj.addClass(options.classToAdd);
 
-					// Do the callback function. Callback wil send the jQuery object as parameter
-					options.callbackFunction($obj);
-				}
-			});
-		};
+          // Do the callback function. Callback wil send the jQuery object as parameter
+          options.callbackFunction($obj);
+        }
+      });
+    };
 
-		// Run checkelements on load and scroll
-		$(window).scroll(this.checkElements);
-		this.checkElements();
+    // Run checkelements on load and scroll
+    $(window).scroll(this.checkElements);
+    this.checkElements();
 
-		// On resize change the height var
-		$(window).resize(function(e){
-			windowHeight = e.currentTarget.innerHeight;
-		});
-	};
+    // On resize change the height var
+    $(window).resize(function(e){
+      windowHeight = e.currentTarget.innerHeight;
+    });
+  };
 
 // testimony
   var slider = $('.slide');
 
   slider.hide();
 
-  var selected = $('.slider-nav').find('.selected');
+  var selected = $('.slider_nav').find('.selected');
   
   function showslider( selected ) {
 
@@ -165,7 +165,7 @@ var overlay = $('<div>', { id: 'overlay' });
 
   showslider( selected );
 
-  $('.slider-nav li').on('click', function(event) {
+  $('.slider_nav li').on('click', function(event) {
     var fadeClass = 'fade';
 
     $(this)

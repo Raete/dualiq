@@ -51,18 +51,62 @@
 
  @-webkit-keyframes pulse {
   0% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    transform: scale(0.6);
     opacity: 0;
   }
   33% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
+    transform: scale(1.4);
     opacity: 0;
   }
+}
+
+//
+//  ANIMATION IN SERVICES SECTION
+// ------------------------------------------------------
+
+.fadeInTop {
+  -webkit-animation: .7s both;
+  -webkit-animation-name: fadeInTop;
+  }
+
+@-webkit-keyframes fadeInTop {
+  0%   { opacity: 0; -webkit-transform: translateY(-10px); }
+  20%  { opacity: 0; }
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+  }
+
+//
+//  TESTIMONY
+// ------------------------------------------------------
+
+.fade {
+  -webkit-animation: 2s both;
+  -webkit-animation-name: fade;
+  }
+
+@-webkit-keyframes fade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+//
+//  TIMELINE
+// ------------------------------------------------------
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.fadeIn {
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }

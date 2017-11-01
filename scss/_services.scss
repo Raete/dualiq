@@ -3,6 +3,77 @@
 // ------------------------------------------------------
 
 .services {
-	display: grid;
-	grid-template-columns: 25% 1fr 1fr 1fr 1fr;
+	background: $color-3;
+	display: flex;
+	&_content {
+		width: 75%;
+		background: $color-bg;	
+	}
+}
+
+.service_menu {
+	padding: 0;
+	margin: 0;
+	background: darken($color-bg, 5%);
+	display: flex;
+	&_wr {
+		width: 100%;
+		padding: 0;
+		font-size: 0;
+	}
+	li {
+		display: inline-block;
+		height: 100%;
+		width: 25%;
+		color: $color-2;
+		border-left: 1px solid darken($color-bg, 20%);
+		padding: 100px 0;
+		margin: 0;
+		list-style: none;
+		cursor: pointer;
+		&:first-child {
+			border-left: 0;
+		}
+		&.selected > a,
+		&:hover > a {
+			color: $color-main;
+		}
+	}
+	a {
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		color: darken($color-bg, 20%);
+		text-transform: uppercase;
+		i {
+			display: block;	
+		}
+	}
+}
+
+.service_info {
+	background: $color-bg;
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+	&_p {
+		width: 50%;
+		line-height: 2em;
+		padding: 0 25px 15px 5px;
+	}
+	&_list {
+		line-height: 2em;
+		width: 50%;
+		padding-top: 0;
+		i {
+			margin-right: 15px;
+			color: $color-main;
+		}
+		li {
+			margin-right: 15px;
+			list-style: none;	
+		}
+	}
 }
