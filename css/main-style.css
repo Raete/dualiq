@@ -157,7 +157,8 @@ body {
 .separator--main-color {
   background: #ea6b66; }
 
-.introducing .separator--center {
+.introducing .separator--center,
+.services .separator--center {
   display: none; }
 
 .title--center {
@@ -1176,7 +1177,8 @@ footer {
       .title_wrapper_h1:before {
         content: "";
         display: none; }
-  .introducing .separator--center {
+  .introducing .separator--center,
+  .services .separator--center {
     display: block; }
   .services {
     display: block; }
